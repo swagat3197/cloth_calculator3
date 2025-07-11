@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cloth Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container glass">
+    <div style="text-align: center; margin-bottom: 15px;"><h1 style="margin: 0; font-size: 26px; letter-spacing: 1px;">MAHINDRAKAR BROTHERS</h1><p style="margin: 0; font-size: 14px; color: #ccc;">Cloth Requirement Calculator</p></div>
+    
+    <div class="form-section">
+      <label for="product">Product:</label>
+      <select id="product"></select>
+
+      <label for="clothSize">Cloth Width:</label>
+      <select id="clothSize"></select>
+    </div>
+
+    <div id="tableContainer">
+      <table id="sizeTable">
+        <thead>
+          <tr>
+            <th>Size</th>
+            <th>Avg Cloth (m)</th>
+            <th>No. of Pieces</th>
+            <th>Total (m)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="summary-section">
+      <h2>Total: <span id="totalCloth">0</span> meters</h2>
+      <button onclick="window.print()">🖨️ Print</button>
+      <button onclick="downloadPDF()">⬇️ PDF</button>
+      <button onclick="resetAll()">🧹 Reset All</button>
+    </div>
+  </div>
+
+  <script src="products.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
